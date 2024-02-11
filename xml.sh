@@ -1,22 +1,22 @@
 #!/bin/bash
 
-# Mengunduh SRBMiner-Multi
-wget https://github.com/doktor83/SRBMiner-Multi/releases/download/2.4.7/SRBMiner-Multi-2-4-7-Linux.tar.xz
+# Mengunduh xmrig 
+wget https://github.com/xmrig/xmrig/releases/download/v6.21.0/xmrig-6.21.0-linux-x64.tar.gz
 
 # Mengekstrak file yang diunduh
-tar -xf SRBMiner-Multi-2-4-7-Linux.tar.xz
+tar -xf xmrig-6.21.0-linux-x64.tar.gz
 
-# Masuk ke direktori SRBMiner-Multi-2-4-7 atau keluar jika gagal
-cd SRBMiner-Multi-2-4-7 || exit
+# Masuk ke direktori xmrig-6.21.0 atau keluar jika gagal
+cd xmrig-6.21.0 || exit
 
-# Menjalankan SRBMiner-Multi untuk 4 instance
+# Menjalankan xmrig untuk 4 instance
 # for ((i = 1; i <= 4; i++)); do
-#     screen -dmS SRBMiner$i ./SRBMiner-MULTI --algorithm randomx --pool stratum+ssl://rx.unmineable.com:443 --wallet XLM:GB2NT6CIX4X2BQI4D4I3RIV2G4J2D5KEKHAPPV66KK4NQ6MHLGSDSWXS.rig-$i
+#     screen -dmS SRBMiner$i ../xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u XLM:GB2NT6CIX4X2BQI4D4I3RIV2G4J2D5KEKHAPPV66KK4NQ6MHLGSDSWXS.xml-$i -p x 
 #     echo "Berhasil menjalankan SRBMiner ke-$i"
 # done
 
 # Menampilkan daftar layar
 # screen -ls
 
-# Menjalankan SRBMiner-MULTI untuk instance ke-5
-./SRBMiner-MULTI --algorithm randomx --pool stratum+ssl://rx.unmineable.com:443 --wallet XLM:GB2NT6CIX4X2BQI4D4I3RIV2G4J2D5KEKHAPPV66KK4NQ6MHLGSDSWXS.rig-5
+# Menjalankan xmrig untuk instance ke-5
+./xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u XLM:GB2NT6CIX4X2BQI4D4I3RIV2G4J2D5KEKHAPPV66KK4NQ6MHLGSDSWXS.xml-5 -p x
