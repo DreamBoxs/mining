@@ -18,10 +18,5 @@ cd xmrig-6.21.0 || exit
 # Menampilkan daftar layar
 # screen -ls
 
-# Menjalankan SRBMiner-MULTI untuk instance ke-5
+# Menjalankan xmrig untuk instance ke-5
 ./xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u DOGE:DQPFq8Zzp89HAXxeM6LY1ya4hsy2vV5BSY.doge-5 -p x 
-
-#!/bin/bash
-
-# Mengunduh SRBMiner-Multi
-wget https://github.com/doktor83/SRBMiner-Multi/releases/download/2.4.7/SRBMiner-Multi-2-4-7-Linux.tar.xz
