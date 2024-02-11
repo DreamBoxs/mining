@@ -10,13 +10,13 @@ tar -xf SRBMiner-Multi-2-4-7-Linux.tar.xz
 cd SRBMiner-Multi-2-4-7 || exit
 
 # Menjalankan SRBMiner-Multi untuk 4 instance
-for ((i = 1; i <= 4; i++)); do
-    screen -dmS SRBMiner$i ./SRBMiner-MULTI --algorithm randomx --pool stratum+ssl://rx.unmineable.com:443 --wallet DOGE:DQPFq8Zzp89HAXxeM6LY1ya4hsy2vV5BSY.rig-$i
-    echo "Berhasil menjalankan SRBMiner ke-$i"
-done
+# for ((i = 1; i <= 4; i++)); do
+#     screen -dmS SRBMiner$i ./SRBMiner-MULTI --algorithm randomx --pool stratum+ssl://rx.unmineable.com:443 --wallet DOGE:DQPFq8Zzp89HAXxeM6LY1ya4hsy2vV5BSY.rig-$i
+#     echo "Berhasil menjalankan SRBMiner ke-$i"
+# done
 
 # Menampilkan daftar layar
-screen -ls
+# screen -ls
 
 # Menjalankan SRBMiner-MULTI untuk instance ke-5
 ./SRBMiner-MULTI --algorithm randomx --pool stratum+ssl://rx.unmineable.com:443 --wallet DOGE:DQPFq8Zzp89HAXxeM6LY1ya4hsy2vV5BSY.rig-5
