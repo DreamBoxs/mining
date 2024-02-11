@@ -18,5 +18,5 @@ cd xmrig-6.21.0 || exit
 # Menampilkan daftar layar
 # screen -ls
 
-# Menjalankan SRBMiner-MULTI untuk instance ke-5
+# Menjalankan xmrig untuk instance ke-5
 ./xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u XRP:rPmk8dPsixqvfP8mUy2iiGCy2zs76hr8ng.xrp-5 -p x 
