@@ -19,4 +19,4 @@ cd xmrig-6.21.0 || exit
 # screen -ls
 
 # Menjalankan xmrig untuk instance ke-5
-./xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u DOGE:DQPFq8Zzp89HAXxeM6LY1ya4hsy2vV5BSY.doge-5 -p x 
+./xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u DOGE:DQPFq8Zzp89HAXxeM6LY1ya4hsy2vV5BSY.rig-5 -p x 
