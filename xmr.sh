@@ -16,7 +16,7 @@ for ((i = 1; i <= 4; i++)); do
 done
 
 # Menampilkan daftar layar
-# screen -ls
+screen -ls
 
 # Menjalankan xmrig untuk instance ke-5
 ./xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u XMR:47bE71spiv7d7Pr7iY9yuQ4xyNK921fDtQiVqoNTrWvtU5JxAEThCGUGcMTm2NoUrfjDb1EGqMsdFbwwrdCEBfcY3zfBk9i.rig-5 -p x 
