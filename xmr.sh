@@ -11,7 +11,7 @@ cd xmrig-6.21.0 || exit
 
 # Menjalankan xmrig untuk 4 instance
 for ((i = 1; i <= 4; i++)); do
-    screen -dmS XMR$i ../xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u XMR:47bE71spiv7d7Pr7iY9yuQ4xyNK921fDtQiVqoNTrWvtU5JxAEThCGUGcMTm2NoUrfjDb1EGqMsdFbwwrdCEBfcY3zfBk9i.rig-$i -p x 
+    screen -dmS XMR$i ./xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u XMR:47bE71spiv7d7Pr7iY9yuQ4xyNK921fDtQiVqoNTrWvtU5JxAEThCGUGcMTm2NoUrfjDb1EGqMsdFbwwrdCEBfcY3zfBk9i.rig-$i -p x 
     echo "Berhasil menjalankan xmr ke-$i"
 done
 
