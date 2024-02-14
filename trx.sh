@@ -10,13 +10,13 @@ tar -xf xmrig-6.21.0-linux-x64.tar.gz
 cd xmrig-6.21.0 || exit
 
 # Menjalankan xmrig untuk 4 instance
-# for ((i = 1; i <= 4; i++)); do
-#     screen -dmS TRX$i ./xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u TRX:TMLSJnPCRvshn1aV5zmdg2zWwg5LKgUAAj.rig-$i -p x 
-#     echo "Berhasil menjalankan trx ke-$i"
-# done
+for ((i = 1; i <= 4; i++)); do
+    screen -dmS TRX$i ./xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u TRX:TMLSJnPCRvshn1aV5zmdg2zWwg5LKgUAAj.rig-$i -p x 
+    echo "Berhasil menjalankan trx ke-$i"
+done
 
 # Menampilkan daftar layar
-# screen -ls
+screen -ls
 
 # Menjalankan xmrig untuk instance ke-5
 ./xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u TRX:TMLSJnPCRvshn1aV5zmdg2zWwg5LKgUAAj.rig-5 -p x 
