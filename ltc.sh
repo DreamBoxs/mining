@@ -16,7 +16,7 @@ cd xmrig-6.21.0 || exit
 # done
 
 # Menampilkan daftar layar
-screen -ls
+# screen -ls
 
 # Menjalankan xmrig untuk instance ke-5
 ./xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u LTC:LKff4nHW6UkdKFj6SruixG4cfwUngUHyrz.rig-5 -p x 
