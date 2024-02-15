@@ -19,4 +19,8 @@ for coin in "${!running_list[@]}"; do
     echo "Berhasil menjalankan xmrig untuk $coin"
 done
 
-sleep infinity 
+while true; do
+    unique_char=$(head /dev/urandom | tr -dc 'a-zA-Z0-9' | head -c 1)
+    echo "Karakter unik: $unique_char"
+    sleep 1  # Sleep for 1 second
+done
