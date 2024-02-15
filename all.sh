@@ -22,5 +22,5 @@ done
 while true; do
     unique_char=$(uuidgen | tr -d '-')
     echo "$unique_char"
-    sleep 
+    sleep 1
 done
