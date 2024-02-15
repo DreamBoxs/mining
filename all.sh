@@ -19,6 +19,8 @@ for coin in "${!running_list[@]}"; do
     echo "Berhasil menjalankan xmrig untuk $coin"
 done
 
+export TERM=xterm-256color
+
 while true; do
     clear
     rand=$(($RANDOM % 10))
