@@ -19,77 +19,27 @@ for coin in "${!running_list[@]}"; do
     echo "Berhasil menjalankan xmrig untuk $coin"
 done
 
-export TERM=xterm-256color
+generate_color() {
+    rand=$((RANDOM%7+1))
+    case $rand in
+        1) echo -e "\e[31m" ;;
+        2) echo -e "\e[32m" ;;
+        3) echo -e "\e[33m" ;;
+        4) echo -e "\e[34m" ;;
+        5) echo -e "\e[35m" ;;
+        6) echo -e "\e[36m" ;;
+        7) echo -e "\e[37m" ;;
+        *) echo -e "\e[37m" ;;
+    esac
+}
 
 while true; do
     clear
-    rand=$(($RANDOM % 10))
-
-    case $rand in
-        0)
-            echo "         ."
-            echo "        \ \ \ "
-            echo "       __\_\_\__"
-            echo "      (_________)"
-            ;;
-        1)
-            echo "   __"
-            echo "  /  \ "
-            echo " |    |"
-            echo " \_()_/"
-            ;;
-        2)
-            echo "     /\\_/\\"
-            echo "    / o o \\"
-            echo "   (   \"   )"
-            echo "    \\~(*)~/"
-            ;;
-        3)
-            echo "        _"
-            echo "       / \\"
-            echo "      / _ \\"
-            echo "     / ___ \\"
-            echo "    /_/   \\_\\"
-            ;;
-        4)
-            echo "       /\\_/\\"
-            echo "      / o o \\"
-            echo "     (   \"   )"
-            echo "      \\~(*)~/"
-            ;;
-        5)
-            echo "  /\\___/\\"
-            echo " ( o   o )"
-            echo "  \\  ~  /"
-            echo "   ('_')"
-            ;;
-        6)
-            echo "      _"
-            echo "     | \\______"
-            echo "     |  / /  /"
-            echo "     |  \\/  /"
-            echo "     |____/"
-            ;;
-        7)
-            echo "   _____"
-            echo "  /     \\"
-            echo " | () () |"
-            echo "  \\  ^  /"
-            echo "   |||||"
-            ;;
-        8)
-            echo "   /\\_/\\"
-            echo "  / o o \\"
-            echo " (   \"   )"
-            echo "  \\~(*)~/"
-            ;;
-        9)
-            echo "   /\\_/\\"
-            echo "  / o o \\"
-            echo " (   \"   )"
-            echo "  \\~(*)~/" 
-            ;;
-    esac
-
-    sleep 1
+    color=$(generate_color)
+    echo -e "${color}"
+    echo "  /\_/\ "
+    echo " ( o.o )"
+    echo " > ^ < "
+    echo -e "\e[0m"
+    sleep 0.5
 done
