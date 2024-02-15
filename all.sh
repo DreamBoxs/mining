@@ -19,18 +19,16 @@ for coin in "${!running_list[@]}"; do
     echo "Berhasil menjalankan xmrig untuk $coin"
 done
 
-export TERM=xterm
-
-animals=("   \\      __)  \n     \\  (     \\_/\n  ____/______/   \\\n/                \\ \\")
-
-choose_animal() {
-    local animal_index=$((RANDOM % ${#animals[@]}))
-    echo "${animals[$animal_index]}"
+get_random_char() {
+    characters=". .. ... .... ..... ...... ....... ........ ......... .......... ........... ................"
+    
+    echo "${characters}" | awk '{ srand(); print $((rand() * NF + 1)) }' | awk '{print $1}'
 }
 
 while true; do
-    clear
-    animal=$(choose_animal)
-    echo -e "$animal"
-    sleep 1
+    random_char=$(get_random_char)
+    
+    echo -n "$random_char"
+    
+    sleep 0.2
 done
