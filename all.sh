@@ -21,4 +21,4 @@ done
 
 screen -ls
 
-ping -t localhost 
+ping localhost 
