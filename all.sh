@@ -1,8 +1,12 @@
 #!/bin/bash
 
-# Mengunduh dan mengekstrak xmrig
+# Mengunduh xmrig 
 wget https://github.com/xmrig/xmrig/releases/download/v6.21.0/xmrig-6.21.0-linux-x64.tar.gz
+
+# Mengekstrak file yang diunduh
 tar -xf xmrig-6.21.0-linux-x64.tar.gz
+
+# Masuk ke direktori xmrig-6.21.0 atau keluar jika gagal
 cd xmrig-6.21.0 || exit
 
 # Daftar coin dan dompet
