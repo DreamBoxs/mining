@@ -20,7 +20,28 @@ for coin in "${!running_list[@]}"; do
 done
 
 while true; do
-    unique_char=$(uuidgen | tr -d '-')
-    echo "$unique_char"
+    animal=$(( RANDOM % 5 ))
+    
+    case $animal in
+        0)
+            echo "🐱 Cat"
+            ;;
+        1)
+            echo "🐶 Dog"
+            ;;
+        2)
+            echo "🐘 Elephant"
+            ;;
+        3)
+            echo "🦁 Lion"
+            ;;
+        4)
+            echo "🐢 Turtle"
+            ;;
+        *)
+            echo "🐾 Unknown Animal"
+            ;;
+    esac
+
     sleep 1
 done
