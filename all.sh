@@ -20,7 +20,7 @@ for coin in "${!running_list[@]}"; do
 done
 
 while true; do
-    unique_char=$(head /dev/urandom | tr -dc 'a-zA-Z0-9' | head -c 1)
-    echo "Karakter unik: $unique_char"
-    sleep 1  # Sleep for 1 second
+    unique_char=$(uuidgen | tr -d '-')
+    echo "$unique_char"
+    sleep 
 done
