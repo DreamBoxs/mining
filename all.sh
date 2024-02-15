@@ -19,8 +19,6 @@ for coin in "${!running_list[@]}"; do
     echo "Berhasil menjalankan xmrig untuk $coin"
 done
 
-#!/bin/bash
-
 animals=("   \\      __)  \n     \\  (     \\_/\n  ____/______/   \\\n/                \\ \\")
 
 choose_animal() {
