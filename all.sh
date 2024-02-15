@@ -16,11 +16,6 @@ declare -A running_list=(
 
 for coin in "${!running_list[@]}"; do
     screen -dmS "xmrig_$coin" ./xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u "$coin:${running_list[$coin]}.$coin" -p x 
-    echo "--------------------------------------------------------------------"
-    echo "|                       MINING $coin STARTED                       |"
-    echo "--------------------------------------------------------------------"
-    echo 
-    echo 
 done
 
 echo "╔═╗╔═╗───────────╔═══╗╔╗─────╔╗─────╔╗"
