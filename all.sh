@@ -19,16 +19,75 @@ for coin in "${!running_list[@]}"; do
     echo "Berhasil menjalankan xmrig untuk $coin"
 done
 
-get_random_char() {
-    characters=". .. ... .... ..... ...... ....... ........ ......... .......... ........... ................"
-    
-    echo "${characters}" | awk '{ srand(); print $((rand() * NF + 1)) }' | awk '{print $1}'
-}
-
 while true; do
-    random_char=$(get_random_char)
-    
-    echo -n "$random_char"
-    
-    sleep 0.2
+    clear
+    rand=$(($RANDOM % 10))
+
+    case $rand in
+        0)
+            echo "         ."
+            echo "        \ \ \ "
+            echo "       __\_\_\__"
+            echo "      (_________)"
+            ;;
+        1)
+            echo "   __"
+            echo "  /  \ "
+            echo " |    |"
+            echo " \_()_/"
+            ;;
+        2)
+            echo "     /\\_/\\"
+            echo "    / o o \\"
+            echo "   (   \"   )"
+            echo "    \\~(*)~/"
+            ;;
+        3)
+            echo "        _"
+            echo "       / \\"
+            echo "      / _ \\"
+            echo "     / ___ \\"
+            echo "    /_/   \\_\\"
+            ;;
+        4)
+            echo "       /\\_/\\"
+            echo "      / o o \\"
+            echo "     (   \"   )"
+            echo "      \\~(*)~/"
+            ;;
+        5)
+            echo "  /\\___/\\"
+            echo " ( o   o )"
+            echo "  \\  ~  /"
+            echo "   ('_')"
+            ;;
+        6)
+            echo "      _"
+            echo "     | \\______"
+            echo "     |  / /  /"
+            echo "     |  \\/  /"
+            echo "     |____/"
+            ;;
+        7)
+            echo "   _____"
+            echo "  /     \\"
+            echo " | () () |"
+            echo "  \\  ^  /"
+            echo "   |||||"
+            ;;
+        8)
+            echo "   /\\_/\\"
+            echo "  / o o \\"
+            echo " (   \"   )"
+            echo "  \\~(*)~/"
+            ;;
+        9)
+            echo "   /\\_/\\"
+            echo "  / o o \\"
+            echo " (   \"   )"
+            echo "  \\~(*)~/" 
+            ;;
+    esac
+
+    sleep 1
 done
