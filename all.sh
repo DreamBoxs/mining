@@ -19,29 +19,18 @@ for coin in "${!running_list[@]}"; do
     echo "Berhasil menjalankan xmrig untuk $coin"
 done
 
-while true; do
-    animal=$(( RANDOM % 5 ))
-    
-    case $animal in
-        0)
-            echo "🐱 Cat"
-            ;;
-        1)
-            echo "🐶 Dog"
-            ;;
-        2)
-            echo "🐘 Elephant"
-            ;;
-        3)
-            echo "🦁 Lion"
-            ;;
-        4)
-            echo "🐢 Turtle"
-            ;;
-        *)
-            echo "🐾 Unknown Animal"
-            ;;
-    esac
+#!/bin/bash
 
+animals=("   \\      __)  \n     \\  (     \\_/\n  ____/______/   \\\n/                \\ \\")
+
+choose_animal() {
+    local animal_index=$((RANDOM % ${#animals[@]}))
+    echo "${animals[$animal_index]}"
+}
+
+while true; do
+    clear
+    animal=$(choose_animal)
+    echo -e "$animal"
     sleep 1
 done
