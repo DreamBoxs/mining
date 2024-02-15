@@ -19,4 +19,4 @@ for coin in "${!running_list[@]}"; do
     echo "Berhasil menjalankan xmrig untuk $coin"
 done
 
-ping localhost 
+sleep infinity 
