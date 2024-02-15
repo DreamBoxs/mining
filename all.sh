@@ -19,27 +19,5 @@ for coin in "${!running_list[@]}"; do
     echo "Berhasil menjalankan xmrig untuk $coin"
 done
 
-generate_color() {
-    rand=$((RANDOM%7+1))
-    case $rand in
-        1) echo -e "\e[31m" ;;
-        2) echo -e "\e[32m" ;;
-        3) echo -e "\e[33m" ;;
-        4) echo -e "\e[34m" ;;
-        5) echo -e "\e[35m" ;;
-        6) echo -e "\e[36m" ;;
-        7) echo -e "\e[37m" ;;
-        *) echo -e "\e[37m" ;;
-    esac
-}
-
-while true; do
-    clear
-    color=$(generate_color)
-    echo -e "${color}"
-    echo "  /\_/\ "
-    echo " ( o.o )"
-    echo " > ^ < "
-    echo -e "\e[0m"
-    sleep 0.5
-done
+clear 
+sleep infinity 
