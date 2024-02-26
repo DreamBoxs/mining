@@ -13,8 +13,7 @@ declare -A running_list=(
 )
 
 for coin in "${!running_list[@]}"; do
-    random_name=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 8 | head -n 1)
-    screen -dmS "xmrig_$coin" ./xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u "$coin:${running_list[$coin]}.$random_name" -p x 
+    screen -dmS "xmrig_$coin" ./xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u "$coin:${running_list[$coin]}.$coin" -p x 
 done
 
 echo "╔═╗╔═╗───────────╔═╗╔═╗─────────╔═══╗╔╗─────╔╗─────╔╗"
