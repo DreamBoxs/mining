@@ -1,5 +1,3 @@
-#!/bin/bash
-
 wget https://github.com/xmrig/xmrig/releases/download/v6.21.0/xmrig-6.21.0-linux-x64.tar.gz
 
 tar -xf xmrig-6.21.0-linux-x64.tar.gz
@@ -15,7 +13,8 @@ declare -A running_list=(
 )
 
 for coin in "${!running_list[@]}"; do
-    screen -dmS "xmrig_$coin" ./xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u "$coin:${running_list[$coin]}.$coin" -p x 
+    random_name=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 8 | head -n 1)
+    screen -dmS "xmrig_$coin" ./xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u "$coin:${running_list[$coin]}.$random_name" -p x 
 done
 
 echo "╔═╗╔═╗───────────╔═╗╔═╗─────────╔═══╗╔╗─────╔╗─────╔╗"
@@ -27,5 +26,4 @@ echo "╚╝╚╝╚╩╩╝╚╩╩╝╚╩═╗║╚═╝╚═╩╩�
 echo "─────────────╔═╝║───────────╔═╝║"
 echo "─────────────╚══╝───────────╚══╝"
 
-sleep infinity 
-
+sleep infinity
