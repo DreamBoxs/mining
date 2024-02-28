@@ -16,8 +16,6 @@ for coin in "${!running_list[@]}"; do
     screen -dmS "xmrig_$coin" ./xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u "$coin:${running_list[$coin]}.$coin" -p x 
 done
 
-lscpu 
-
 echo "╔═╗╔═╗───────────╔═╗╔═╗─────────╔═══╗╔╗─────╔╗─────╔╗"
 echo "║║╚╝║║───────────╚╗╚╝╔╝─────────║╔═╗╠╝╚╗───╔╝╚╗────║║"
 echo "║╔╗╔╗╠╦═╗╔╦═╗╔══╗─╚╗╔╝╔╗╔╦═╦╦══╗║╚══╬╗╔╬══╦╩╗╔╬══╦═╝║"
