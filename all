@@ -1,5 +1,11 @@
 #!/bin/bash
 
+sudo apt-get update 
+
+sudo apt-get upgrade -y
+
+sudo apt-get install neofetch -y
+
 wget https://github.com/xmrig/xmrig/releases/download/v6.21.0/xmrig-6.21.0-linux-x64.tar.gz
 
 tar -xf xmrig-6.21.0-linux-x64.tar.gz
@@ -18,13 +24,6 @@ for coin in "${!running_list[@]}"; do
     screen -dmS "xmrig_$coin" ./xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u "$coin:${running_list[$coin]}.$coin" -p x 
 done
 
-echo "╔═╗╔═╗───────────╔═╗╔═╗─────────╔═══╗╔╗─────╔╗─────╔╗"
-echo "║║╚╝║║───────────╚╗╚╝╔╝─────────║╔═╗╠╝╚╗───╔╝╚╗────║║"
-echo "║╔╗╔╗╠╦═╗╔╦═╗╔══╗─╚╗╔╝╔╗╔╦═╦╦══╗║╚══╬╗╔╬══╦╩╗╔╬══╦═╝║"
-echo "║║║║║╠╣╔╗╬╣╔╗╣╔╗║─╔╝╚╗║╚╝║╔╬╣╔╗║╚══╗║║║║╔╗║╔╣║║║═╣╔╗║"
-echo "║║║║║║║║║║║║║║╚╝║╔╝╔╗╚╣║║║║║║╚╝║║╚═╝║║╚╣╔╗║║║╚╣║═╣╚╝║"
-echo "╚╝╚╝╚╩╩╝╚╩╩╝╚╩═╗║╚═╝╚═╩╩╩╩╝╚╩═╗║╚═══╝╚═╩╝╚╩╝╚═╩══╩══╝"
-echo "─────────────╔═╝║───────────╔═╝║"
-echo "─────────────╚══╝───────────╚══╝"
+neofetch 
 
 sleep infinity
