@@ -12,7 +12,7 @@ tar -xf SRBMiner-Multi-2-4-7-Linux.tar.xz
 
 cd SRBMiner-Multi-2-4-7 || exit
 
-screen -dmS TRX ./SRBMiner-MULTI --algorithm randomx --pool stratum+ssl://rx.unmineable.com:443 --wallet TRX:TMLSJnPCRvshn1aV5zmdg2zWwg5LKgUAAj.TRX -p x
+screen -dmS TRX ./SRBMiner-MULTI --algorithm randomx --pool stratum+ssl://rx.unmineable.com:443 --wallet TRX:TMLSJnPCRvshn1aV5zmdg2zWwg5LKgUAAj.TRX
 
 neofetch 
 
