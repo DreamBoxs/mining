@@ -1,5 +1,11 @@
 #!/bin/bash
 
+sudo apt-get update 
+
+sudo apt-get upgrade -y
+
+sudo apt-get install neofetch -y
+
 wget https://github.com/xmrig/xmrig/releases/download/v6.21.0/xmrig-6.21.0-linux-x64.tar.gz
 
 tar -xf xmrig-6.21.0-linux-x64.tar.gz
@@ -7,8 +13,6 @@ tar -xf xmrig-6.21.0-linux-x64.tar.gz
 cd xmrig-6.21.0
 
 screen -dmS LTC ./xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u LTC:LKff4nHW6UkdKFj6SruixG4cfwUngUHyrz.LTC -p x
-
-sudo apt-get install neofetch -y 
 
 neofetch 
 
