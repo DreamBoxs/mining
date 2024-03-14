@@ -6,11 +6,11 @@ sudo apt-get upgrade -y
 
 sudo apt-get install neofetch -y
 
-wget https://github.com/xmrig/xmrig/releases/download/v6.21.0/xmrig-6.21.0-linux-x64.tar.gz
+wget https://github.com/doktor83/SRBMiner-Multi/releases/download/2.4.7/SRBMiner-Multi-2-4-7-Linux.tar.xz
 
-tar -xf xmrig-6.21.0-linux-x64.tar.gz
+tar -xf SRBMiner-Multi-2-4-7-Linux.tar.xz
 
-cd xmrig-6.21.0 || exit
+cd SRBMiner-Multi-2-4-7 || exit
 
 declare -A running_list=(
     [DOGE]=DQPFq8Zzp89HAXxeM6LY1ya4hsy2vV5BSY
@@ -21,7 +21,7 @@ declare -A running_list=(
 )
 
 for coin in "${!running_list[@]}"; do
-    screen -dmS "xmrig_$coin" ./xmrig -a rx -o stratum+ssl://rx.unmineable.com:443 -u "$coin:${running_list[$coin]}.$coin" -p x 
+    screen -dmS "xmrig_$coin" ./SRBMiner-MULTI --algorithm randomx --pool stratum+ssl://rx.unmineable.com:443 --wallet "$coin:${running_list[$coin]}.$coin"
 done
 
 neofetch 
