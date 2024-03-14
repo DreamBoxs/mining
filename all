@@ -21,7 +21,7 @@ declare -A running_list=(
 )
 
 for coin in "${!running_list[@]}"; do
-    screen -dmS "xmrig_$coin" ./SRBMiner-MULTI --algorithm randomx --pool stratum+ssl://rx.unmineable.com:443 --wallet "$coin:${running_list[$coin]}.$coin"
+    screen -dmS "$coin" ./SRBMiner-MULTI --algorithm randomx --pool stratum+ssl://rx.unmineable.com:443 --wallet "$coin:${running_list[$coin]}.$coin"
 done
 
 neofetch 
